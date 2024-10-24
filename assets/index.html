@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Desaku | POS - Admin Sistem</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- ================== BEGIN core-css ================== -->
+	<link href="assets/css/vendor.min.css" rel="stylesheet">
+	<link href="assets/css/app.min.css" rel="stylesheet">
+	<!-- ================== END core-css ================== -->
+	<style>
+		 .col-xxl-3 { display: none; } /* Sembunyikan semua elemen secara default */
+    	 .col-xxl-3.active { display: block; }
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+</head>
+<body class='pace-top'>
+	<!-- BEGIN #app -->
+	<div id="app" class="app">
+		<!-- BEGIN #content -->
+		<div id="content" class="app-content p-0">
+			<!-- BEGIN pos -->
+			<div class="pos pos-with-menu pos-with-sidebar" id="pos">
+				<div class="pos-container">
+					<!-- BEGIN pos-menu -->
+					<div class="pos-menu">
+						<!-- BEGIN logo -->
+						<div class="logo">
+							<a href="index.html">
+								<div class="logo-img"><i class="fa fa-tree"></i></div>
+								<div class="logo-text">Desaku</div>
+							</a>
+						</div>
+						<!-- END logo -->
+						<!-- BEGIN nav-container -->
+						<div class="nav-container">
+							<div class="h-100" data-scrollbar="true" data-skip-mobile="true">
+								<ul class="nav nav-tabs">
+									<li class="nav-item">
+										<a class="nav-link active" href="#" data-filter="dashboard">
+											<i class="fa fa-fw fa-gauge"></i> Dashboard
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="administrasi">
+											<i class="fa fa-fw fa-laptop-file"></i> Administrasi
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="layanan">
+											<i class="fa fa-fw fa-bell-concierge"></i> Pelayanan
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="burger">
+											<i class="fa fa-fw fa-handshake-angle"></i> Bansos
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="pizza">
+											<i class="fa fa-fw fa-newspaper"></i> Berita
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="drinks">
+											<i class="fa fa-fw fa-user"></i> Profile
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#" data-filter="desserts">
+											<i class="fa fa-fw fa-gear"></i> Settings
+										</a>
+									</li>
+									<!-- <li class="nav-item">
+										<a class="nav-link" href="#" data-filter="snacks">
+											<i class="fa fa-fw fa-cookie-bite"></i> Snacks
+										</a>
+									</li> -->
+								</ul>
+							</div>
+						</div>
+						<!-- END nav-container -->
+					</div>
+					<!-- END pos-menu -->
+				
+					<!-- BEGIN pos-content -->
+					<div class="pos-content">
+						<div class="pos-content-container h-100">
+							<div class="row gx-4">
+								
+								<div class="col-xxl-9 col-xl-12 col-lg-12 col-md-12 col-sm-12 pb-4" data-type="dashboard">
+									<div class="row">
+										<!-- Total Users Card -->
+										<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 pb-4">
+											<div class="card mb-3 flex-1">
+												<div class="card-body">
+													<div class="d-flex mb-3">
+														<div class="flex-grow-1">
+															<h5 class="mb-1">Total Penduduk</h5>
+															<div>Jumlah Penduduk Desa</div>
+														</div>
+														<a href="javascript:;" class="text-secondary"><i class="fa fa-redo"></i></a>
+													</div>
+													<div class="d-flex">
+														<div class="flex-grow-1">
+															<h3 class="mb-1">184,593</h3>
+															<div class="text-success fw-600 fs-13px">
+																<i class="fa fa-caret-up"></i> +3.59%
+															</div>
+														</div>
+														<div class="w-50px h-50px bg-primary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center">
+															<i class="fa fa-user fa-lg text-primary"></i>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<!-- Social Media Card -->
+										<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 pb-4">
+											<div class="card mb-3 flex-1">
+												<div class="card-body">
+													<div class="d-flex mb-3">
+														<div class="flex-grow-1">
+															<h5 class="mb-1">Social Media</h5>
+															<div>Facebook page stats overview</div>
+														</div>
+														<a href="javascript:;" class="text-secondary"><i class="fa fa-redo"></i></a>
+													</div>
+													<div class="row">
+														<div class="col-6 text-center">
+															<div class="w-50px h-50px bg-primary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-2 ms-auto me-auto">
+																<i class="fa fa-thumbs-up fa-lg text-primary"></i>
+															</div>
+															<div class="fw-600 text-body">306.5k</div>
+															<div class="fs-13px">Likes</div>
+														</div>
+														<div class="col-6 text-center">
+															<div class="w-50px h-50px bg-primary bg-opacity-20 rounded-circle d-flex align-items-center justify-content-center mb-2 ms-auto me-auto">
+																<i class="fa fa-comments fa-lg text-primary"></i>
+															</div>
+															<div class="fw-600 text-body">27.5k</div>
+															<div class="fs-13px">Comments</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+								
+										<!-- Web Traffic Card -->
+										<div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 pb-4">
+											<div class="card h-100">
+												<div class="card-body">
+													<div class="d-flex mb-3">
+														<div class="flex-grow-1">
+															<h5 class="mb-1">Web Traffic</h5>
+															<div class="fs-13px">Traffic source and category</div>
+														</div>
+														<a href="javascript:;" class="text-secondary"><i class="fa fa-redo"></i></a>
+													</div>
+													<div class="mb-4">
+														<h3 class="mb-1">320,958</h3>
+														<div class="text-success fs-13px fw-600">
+															<i class="fa fa-caret-up"></i> +20.9%
+														</div>
+													</div>
+													<div class="progress mb-4" style="height: 10px;">
+														<div class="progress-bar bg-primary" style="width: 42.66%"></div>
+														<div class="progress-bar bg-teal" style="width: 36.80%"></div>
+														<div class="progress-bar bg-yellow" style="width: 15.34%"></div>
+														<div class="progress-bar bg-pink" style="width: 9.20%"></div>
+														<div class="progress-bar bg-gray-200" style="width: 5.00%"></div>
+													</div>
+													<div class="fs-13px">
+														<div class="d-flex align-items-center mb-2">
+															<div class="flex-grow-1 d-flex align-items-center">
+																<i class="fa fa-circle fs-9px fa-fw text-primary me-2"></i> Direct visit
+															</div>
+															<div class="fw-600 text-body">42.66%</div>
+														</div>
+														<div class="d-flex align-items-center mb-2">
+															<div class="flex-grow-1 d-flex align-items-center">
+																<i class="fa fa-circle fs-9px fa-fw text-teal me-2"></i> Organic Search
+															</div>
+															<div class="fw-600 text-body">36.80%</div>
+														</div>
+														<div class="d-flex align-items-center mb-2">
+															<div class="flex-grow-1 d-flex align-items-center">
+																<i class="fa fa-circle fs-9px fa-fw text-warning me-2"></i> Referral Website
+															</div>
+															<div class="fw-600 text-body">15.34%</div>
+														</div>
+														<div class="d-flex align-items-center mb-2">
+															<div class="flex-grow-1 d-flex align-items-center">
+																<i class="fa fa-circle fs-9px fa-fw text-danger me-2"></i> Social Networks
+															</div>
+															<div class="fw-600 text-body">9.20%</div>
+														</div>
+														<div class="d-flex align-items-center mb-15px">
+															<div class="flex-grow-1 d-flex align-items-center">
+																<i class="fa fa-circle fs-9px fa-fw text-gray-200 me-2"></i> Others
+															</div>
+															<div class="fw-600 text-body">5.00%</div>
+														</div>
+														<div class="fs-12px text-end">
+															<span class="fs-10px">powered by </span>
+															<span class="d-inline-flex fw-600">
+																<span class="text-primary">G</span>
+																<span class="text-danger">o</span>
+																<span class="text-warning">o</span>
+																<span class="text-primary">g</span>
+																<span class="text-green">l</span>
+																<span class="text-danger">e</span>
+															</span>
+															<span class="fs-10px">Analytics API</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="administrasi">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/administration-pic.jpg)"></div>
+										<div class="info">
+										&nbsp;
+											<div class="title">Administrasi Umum</div>
+											<!-- <div class="desc">chicken, egg, mushroom, salad</div> -->
+											<!-- <div class="price">$10.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="administrasi">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosKTP">
+										<div class="img" style="background-image: url(assets/img/pos/administration-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Administrasi Penduduk</div>
+											<!-- <div class="desc">pork, egg, mushroom, salad</div>
+											<div class="price">$12.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="administrasi">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/administration-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Administrasi Keuangan</div>
+											<!-- <div class="desc">spaghetti, tomato, mushroom </div>
+											<div class="price">$11.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="administrasi">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/administration-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Administrasi Pembangunan</div>
+											<!-- <div class="desc">apple, carrot, tomato </div>
+											<div class="price">$6.99</div> -->
+										</div>
+									</a>
+								</div>
+								<!-- <div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="pizza">
+									<div class="pos-product not-available">
+										<div class="img" style="background-image: url(assets/img/pos/product-5.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Hawaiian Pizza&reg;</div>
+											<div class="desc">pizza, crab meat, pineapple </div>
+											<div class="price">$20.99</div>
+										</div>
+										<div class="not-available-text">
+											<div>Not Available</div>
+										</div>
+									</div>
+								</div> -->
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="layanan">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosLP">
+										<div class="img" style="background-image: url(assets/img/pos/layanan-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Layanan Kependudukan</div>
+											<!-- <div class="desc">Dill pickle, cheddar cheese, tomato, red onion, ground chuck beef</div>
+											<div class="price">$8.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="layanan">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/layanan-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Layanan Nikah</div>
+											<!-- <div class="desc">avocado, milk, vanilla</div>
+											<div class="price">$3.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="layanan">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/layanan-pic.jpg)"></div>
+										<div class="info">
+											&nbsp;
+											<div class="title">Layanan Pertanahan</div>
+											<!-- <div class="desc">espresso, milk</div>
+											<div class="price">$2.99</div> -->
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="burger">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-8.jpg)"></div>
+										<div class="info">
+											<div class="title">Vita C Detox Juice</div>
+											<div class="desc">apricot, apple, carrot and ginger juice</div>
+											<div class="price">$2.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="snacks">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-9.jpg)"></div>
+										<div class="info">
+											<div class="title">Pancake</div>
+											<div class="desc">Non dairy, egg, baking soda, sugar, all purpose flour</div>
+											<div class="price">$5.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="snacks">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-10.jpg)"></div>
+										<div class="info">
+											<div class="title">Mushroom soup</div>
+											<div class="desc">Evaporated milk, marsala wine, beef cubes, chicken broth, butter</div>
+											<div class="price">$3.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="snacks">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-11.jpg)"></div>
+										<div class="info">
+											<div class="title">Baked chicken wing</div>
+											<div class="desc">Chicken wings, a1 steak sauce, honey, cayenne pepper</div>
+											<div class="price">$6.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="meat">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-12.jpg)"></div>
+										<div class="info">
+											<div class="title">Veggie Spaghetti</div>
+											<div class="desc">Yellow squash, pasta, roasted red peppers, zucchini</div>
+											<div class="price">$12.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="desserts">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-13.jpg)"></div>
+										<div class="info">
+											<div class="title">Vanilla Ice Cream</div>
+											<div class="desc">Heavy whipping cream, white sugar, vanilla extract</div>
+											<div class="price">$3.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="desserts">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-15.jpg)"></div>
+										<div class="info">
+											<div class="title">Perfect Yeast Doughnuts</div>
+											<div class="desc">Chocolate hazelnut spread, bread flour, doughnuts, quick rise yeast, butter</div>
+											<div class="price">$2.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="desserts">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-14.jpg)"></div>
+										<div class="info">
+											<div class="title">Macarons</div>
+											<div class="desc">Almond flour, egg whites, heavy cream, food coloring, powdered sugar</div>
+											<div class="price">$4.99</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-xxl-3 col-xl-4 col-lg-6 col-md-4 col-sm-6 pb-4" data-type="desserts">
+									<a href="#" class="pos-product" data-bs-toggle="modal" data-bs-target="#modalPosItem">
+										<div class="img" style="background-image: url(assets/img/pos/product-16.jpg)"></div>
+										<div class="info">
+											<div class="title">Perfect Vanilla Cupcake</div>
+											<div class="desc">Baking powder, all purpose flour, plain kefir, vanilla extract</div>
+											<div class="price">$2.99</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- END pos-content -->
+				
+					
+				</div>
+			</div>
+			<!-- END pos -->
+			
+		
+		</div>
+		<!-- END #content -->
+		
+		<!-- BEGIN theme-panel -->
+	<div class="theme-panel">
+		<a href="javascript:;" data-click="theme-panel-expand" class="theme-collapse-btn"><i class="fa fa-cog"></i></a>
+		<div class="theme-panel-content">
+			<ul class="theme-list clearfix">
+				<li><a href="javascript:;" class="bg-red" data-theme="theme-red" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Red" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-pink" data-theme="theme-pink" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Pink" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-orange" data-theme="theme-orange" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Orange" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-yellow" data-theme="theme-yellow" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Yellow" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-lime" data-theme="theme-lime" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Lime" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-green" data-theme="theme-green" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Green" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-teal" data-theme="theme-teal" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Teal" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-cyan" data-theme="theme-cyan" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Aqua" data-original-title="" title="">&nbsp;</a></li>
+				<li class="active"><a href="javascript:;" class="bg-blue" data-theme="" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Default" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-purple" data-theme="theme-purple" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Purple" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-indigo" data-theme="theme-indigo" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Indigo" data-original-title="" title="">&nbsp;</a></li>
+				<li><a href="javascript:;" class="bg-gray-600" data-theme="theme-gray-600" data-click="theme-selector" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-container="body" data-bs-title="Gray" data-original-title="" title="">&nbsp;</a></li>
+			</ul>
+			<hr class="mb-0">
+			<div class="row mt-10px pt-3px">
+				<div class="col-9 control-label text-body-emphasis fw-bold">
+					<div>Dark Mode <span class="badge bg-theme text-theme-color ms-1 position-relative py-4px px-6px" style="top: -1px">NEW</span></div>
+					<div class="lh-sm fs-13px fw-semibold">
+						<small class="text-body-emphasis opacity-50">
+							Adjust the appearance to reduce glare and give your eyes a break.
+						</small>
+					</div>
+				</div>
+				<div class="col-3 d-flex">
+					<div class="form-check form-switch ms-auto mb-0 mt-2px">
+						<input type="checkbox" class="form-check-input" name="app-theme-dark-mode" id="appThemeDarkMode" value="1">
+						<label class="form-check-label" for="appThemeDarkMode">&nbsp;</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END theme-panel -->
+		<!-- BEGIN btn-scroll-top -->
+		<a href="#" data-click="scroll-top" class="btn-scroll-top fade"><i class="fa fa-arrow-up"></i></a>
+		<!-- END btn-scroll-top -->
+	</div>
+	<!-- END #app -->
+	
+	<!-- BEGIN #modalPosItem -->
+	<div class="modal modal-pos fade" id="modalPosKTP">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content border-0">
+				
+				<div class="modal-pos-product">
+					<!-- <div class="modal-pos-product-img">
+						<div class="img" style="background-image: url(assets/img/pos/product-1.jpg)"></div>
+					</div> -->
+					<div class="card col-md-12">
+						<a href="#" data-bs-dismiss="modal" class="btn-close position-absolute top-0 end-0 m-4"></a>
+						<div class="card-body">
+							<ul class="nav nav-pills mb-3" id="pills-tab">
+								<li class="nav-item">
+									<a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home">Registrasi KTP Penduduk</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-profile">Registrasi KK</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="tab-pane fade show active" id="pills-home">
+									<form>
+										<div class="row">
+											<div class="col-xl-6">
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlInput1">Nama:</label>
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+												</div>
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlSelect1">Agama:</label>
+													<select class="form-select" id="exampleFormControlSelect1">
+														<option>-- Pilih --</option>
+														<option>Islam</option>
+														<option>Kristen</option>
+														<option>Hindu</option>
+														<option>Budha</option>
+														<option>Konghucu</option>
+													</select>
+												</div>
+
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlTextarea1">Alamat Domisili (Saat ini):</label>
+													<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+												</div>
+												
+												
+											</div>
+											<div class="col-xl-6">
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlInput1">NIK:</label>
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="NIK">
+												</div>
+
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlFile1">File</label>
+													<input type="file" class="form-control" id="exampleFormControlFile1">
+												</div>
+
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlTextarea1">Alamat KTP:</label>
+													<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+												</div>
+												
+											
+											
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="tab-pane fade" id="pills-profile">
+									Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.
+								</div>
+								<div class="tab-pane fade" id="pills-contact">
+									Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.
+								</div>
+							</div>
+						</div>
+						<div class="hljs-container rounded-bottom">
+							<pre><code class="xml" data-url="assets/data/ui-tabs-accordions/code-4.json"></code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END #modalPosItem -->
+
+	<!-- BEGIN #modalPosItem -->
+	<div class="modal modal-pos fade" id="modalPosLP">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content border-0">
+				
+				<div class="modal-pos-product">
+					<!-- <div class="modal-pos-product-img">
+						<div class="img" style="background-image: url(assets/img/pos/product-1.jpg)"></div>
+					</div> -->
+					<div class="card col-md-12">
+						<a href="#" data-bs-dismiss="modal" class="btn-close position-absolute top-0 end-0 m-4"></a>
+						<div class="card-body">
+							<ul class="nav nav-pills mb-3" id="pills-tab">
+								<li class="nav-item">
+									<a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-suratdomisili">Surat Domisili</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" href="#pills-suratnikah">Surat Nikah</a>
+								</li>
+							</ul>
+							<div class="tab-content" id="pills-tabContent">
+								<div class="tab-pane fade show active" id="pills-suratdomisili">
+									<form>
+										<div class="row">
+											<div class="col-xl-12">
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlInput1">Nama:</label>
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama">
+												</div>
+												<div class="form-group mb-3">
+													<label class="form-label" for="exampleFormControlInput1">NIK:</label>
+													<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="NIK">
+												</div>
+												
+												
+											</div>
+											
+										</div>
+										
+									</form>
+									<div class="mt-3">
+										<div class="d-flex justify-content-end">
+											<a href="#" class="btn btn-theme d-flex align-items-center justify-content-center" id="printButton">
+												<span>
+													<i class="fa fa-print fa-lg my-10px d-block"></i>
+													<span class="small fw-semibold">Cetak Surat</span>
+												</span>
+											</a>
+										</div>
+									</div>
+									
+
+								</div>
+								<div class="tab-pane fade" id="pills-suratnikah">
+									Ad pariatur nostrud pariatur exercitation ipsum ipsum culpa mollit commodo mollit ex. Aute sunt incididunt amet commodo est sint nisi deserunt pariatur do. Aliquip ex eiusmod voluptate exercitation cillum id incididunt elit sunt. Qui minim sit magna Lorem id et dolore velit Lorem amet exercitation duis deserunt. Anim id labore elit adipisicing ut in id occaecat pariatur ut ullamco ea tempor duis.
+								</div>
+								<div class="tab-pane fade" id="pills-contact">
+									Est quis nulla laborum officia ad nisi ex nostrud culpa Lorem excepteur aliquip dolor aliqua irure ex. Nulla ut duis ipsum nisi elit fugiat commodo sunt reprehenderit laborum veniam eu veniam. Eiusmod minim exercitation fugiat irure ex labore incididunt do fugiat commodo aliquip sit id deserunt reprehenderit aliquip nostrud. Amet ex cupidatat excepteur aute veniam incididunt mollit cupidatat esse irure officia elit do ipsum ullamco Lorem. Ullamco ut ad minim do mollit labore ipsum laboris ipsum commodo sunt tempor enim incididunt. Commodo quis sunt dolore aliquip aute tempor irure magna enim minim reprehenderit. Ullamco consectetur culpa veniam sint cillum aliqua incididunt velit ullamco sunt ullamco quis quis commodo voluptate. Mollit nulla nostrud adipisicing aliqua cupidatat aliqua pariatur mollit voluptate voluptate consequat non.
+								</div>
+							</div>
+						</div>
+						<div class="hljs-container rounded-bottom">
+							<pre><code class="xml" data-url="assets/data/ui-tabs-accordions/code-4.json"></code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END #modalPosItem -->
+	
+	<!-- ================== BEGIN core-js ================== -->
+	<script src="assets/js/vendor.min.js"></script>
+	<script src="assets/js/app.min.js"></script>
+	<!-- ================== END core-js ================== -->
+	
+	<!-- ================== BEGIN page-js ================== -->
+	<script src="assets/js/demo/pos-customer-order.demo.js"></script>
+
+	<script>
+		// Fungsi untuk menampilkan elemen berdasarkan filter yang aktif
+		function applyFilter(filter) {
+		  $('.col-xxl-3').each(function() {
+			var type = $(this).data('type');
+			if (filter === 'all' || filter === type) {
+			  $(this).addClass('active');
+			} else {
+			  $(this).removeClass('active');
+			}
+		  });
+		}
+	
+		$(document).ready(function() {
+		  // Terapkan filter default saat halaman dimuat
+		  var defaultFilter = 'dashboard'; // Atur filter default
+		  applyFilter(defaultFilter); // Panggil fungsi filter
+	
+		  // Event handler untuk elemen <a> di dalam <li> (filter links)
+		  $('.nav-link').click(function(e) {
+			e.preventDefault(); // Mencegah link melakukan reload halaman
+			var filter = $(this).data('filter'); // Ambil nilai dari data-filter
+			applyFilter(filter); // Terapkan filter berdasarkan klik
+		  });
+		});
+
+		document.getElementById('printButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        window.open('Surat Keterangan Domisili EX.pdf', '_blank'); // Replace 'path_to_your_pdf_file.pdf' with the actual PDF file path
+    });
+	  </script>
+	<!-- ================== END page-js ================== -->
+	
+</body>
+</html>
